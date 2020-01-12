@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://kit.fontawesome.com/2c626d78c1.js" crossorigin="anonymous"></script>
+  <title>Events</title>
+  <style>
+    li {
+      list-style-type: none;
+      max-width: 200px;
+      padding: 8px;
+      margin: 8px auto;
+      background: #eee;
+      border: 1px dotted #ddd;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    li:hover {
+      cursor: pointer;
+      color: crimson;
+    }
+
+    .coloredLi {
+      color: crimson;
+      text-decoration: line-through;
+    }
+
+    a {
+      text-decoration: none;
+      color: crimson;
+      border-radius: 5px;
+    }
+
+    a:hover {
+      background: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Todos</h1>
+
+  <ul>
+    <li>buy milk<a href="#"><i class="fas fa-times"></i></a></li>
+    <li>read a book<a href="#"><i class="fas fa-times"></i></a></li>
+    <li>play the guitar<a href="#"><i class="fas fa-times"></i></a></li>
+    <li>pay the bills<a href="#"><i class="fas fa-times"></i></a></li>
+  </ul>
+
+  <button>add todo</button>
+
+  <script src="app1.js"></script>
+</body>
+
+</html>
