@@ -14,11 +14,11 @@ let user = {
     }
   ],
   log: false,
-  login: function() {
+  login() {
     console.log('the user logged in');
     this.log = true;
   },
-  logout: function() {
+  logout() {
     if (this.log) {
       console.log('the user logged out');
       this.log = false;
@@ -26,7 +26,7 @@ let user = {
       console.log(`${this.name} has not yet logged in`);
     }
   },
-  logBlogs: function() {
+  logBlogs() {
     this.blogs.forEach(el => console.log(`${el.title}: ${el.likes} likes`));
   }
 };
