@@ -1,10 +1,11 @@
 const now = new Date();
+
 console.log(dateFns.isToday(now));
 
 // formatting options
 console.log(dateFns.format(now, 'YYYY'));
 console.log(dateFns.format(now, 'MMMM'));
-console.log(dateFns.format(now, 'd MMM YYYY'));
+console.log(dateFns.format(now, 'dddd do-MMM-YYYY'));
 
 const before = new Date('February 1 2019 12:00:00');
 console.log(dateFns.distanceInWords(now, before, { addSuffix: true }));
