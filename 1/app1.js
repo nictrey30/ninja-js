@@ -11,4 +11,5 @@ if (true) {
     var test = 'hello';
   }
 }
-console.log(`outside first code block: ${age}, ${name}, ${test}`);
+// console.log(`outside first code block: ${age}, ${name}, ${test}`);
+console.log(`outside first code block: ${age}, ${test}`);
