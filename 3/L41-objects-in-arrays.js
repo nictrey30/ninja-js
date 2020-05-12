@@ -27,8 +27,16 @@ let user = {
     }
   },
   logBlogs() {
-    this.blogs.forEach(el => console.log(`${el.title}: ${el.likes} likes`));
+    console.log('the user has written the following blogs: ');
+    this.blogs.forEach((el) => console.log(`${el.title}: ${el.likes} likes`));
   }
 };
 
 // user.login();
+user.logBlogs();
+
+// generate random numbers
+const random = Math.random();
+console.log(random);
+
+console.log(Math.round(random * 3));
