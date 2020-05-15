@@ -10,6 +10,10 @@
       background: #eee;
     }
 
+    form *:focus {
+      outline: none;
+    }
+
     form {
       max-width: 200px;
       margin: 40px auto;
@@ -23,23 +27,25 @@
       padding: 4px;
     }
 
-    .error {
-      border: 2px solid crimson;
-    }
-
-    .valid {
+    .passed {
       border: 2px solid limegreen;
     }
+
+    .failed {
+      border: 2px solid crimson;
+    }
   </style>
-  <title>Basci form validation</title>
+  <title>Basic Form Validation</title>
 </head>
 
 <body>
   <form action="" class="signup-form">
-    <input type="text" id="username" placeholder="username">
+    <input type="text" name="username" placeholder="username">
     <input type="submit" value="submit">
-    <div class="feedback"></div>
+    <div class="feedback">
+
+    </div>
   </form>
 
-  <script src="62-basic-form-validation.js"></script>
+  <script src="L63-keyboard-events.js"></script>
 </body>

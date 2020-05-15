@@ -8,5 +8,14 @@ form.addEventListener('submit', (e) => {
 
 // testing regex
 const username = 'shaun';
-const pattern = //;
+const pattern = /^[a-z]{5,12}$/;
 
+// let result = pattern.test(username);
+// if (result) {
+//   console.log('regex test passed');
+// } else {
+//   console.log('regex test failed');
+// }
+
+let result = username.search(pattern);
+console.log(result);
