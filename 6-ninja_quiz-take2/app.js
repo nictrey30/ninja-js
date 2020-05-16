@@ -20,6 +20,23 @@ form.addEventListener('submit', (e) => {
   // scroll to the top
   window.scrollTo(0, 0);
   // show results on page
-  result.querySelector('span').textContent = `${score}%`;
+
   result.classList.remove('d-none');
+  let output = 0;
+  const timer = setInterval(() => {
+    result.querySelector('span').textContent = `${output}%`;
+    if (output === score) {
+      clearInterval(timer);
+    }
+    output++;
+  }, 10);
 });
+
+let i = 0;
+const timer = setInterval(() => {
+  console.log('hello world');
+  i++;
+  if (i === 5) {
+    clearInterval(timer);
+  }
+}, 1000);

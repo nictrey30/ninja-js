@@ -1,3 +1,5 @@
+// sort method is destructive
+
 const names = ['mario', 'shaun', 'chun-li', 'yoshi', 'luigi'];
 // names.sort();
 // names.reverse(); - reversed 180
