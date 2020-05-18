@@ -27,3 +27,24 @@ list.addEventListener('click', (e) => {
     e.target.parentElement.remove();
   }
 });
+
+// function for comparing searchTerm with the current todos
+const filterTodos = (term) => {
+  Array.from(list.children)
+    .filter((todo) => {
+      return !todo.textContent.toLowerCase().includes(term);
+    })
+    .forEach((item) => item.classList.add('filtered'));
+  Array.from(list.children)
+    .filter((todo) => {
+      return todo.textContent.toLowerCase().includes(term);
+    })
+    .forEach((item) => item.classList.remove('filtered'));
+};
+
+// filter todos
+const search = document.querySelector('.search input');
+search.addEventListener('keyup', (e) => {
+  const searchTerm = search.value.trim().toLowerCase();
+  filterTodos(searchTerm);
+});
