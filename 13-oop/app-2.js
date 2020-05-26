@@ -7,13 +7,18 @@ class User {
   // arrow functions don't bind the value of this
 }
 
-User.prototype.login = function() {
+// the 'new' keyword
+// 1 - it creates a new empty object {}
+// 2 - it binds the value of 'this' to the new emty object
+// 3 - it calls the constructor function to 'build' the object
+
+User.prototype.login = function () {
   console.log(`${this.username} just logged in`);
 };
-User.prototype.logout = function() {
+User.prototype.logout = function () {
   console.log(`${this.username} just logged out`);
 };
-User.prototype.incScore = function() {
+User.prototype.incScore = function () {
   this.score++;
   console.log(`${this.username} has a score of ${this.score}`);
   return this; // -> for method chaining
@@ -26,9 +31,9 @@ class Admin extends User {
   }
 }
 
-Admin.prototype.deleteUser = function(user) {
+Admin.prototype.deleteUser = function (user) {
   if (!(user instanceof Admin)) {
-    users = users.filter(el => {
+    users = users.filter((el) => {
       return el.username !== user.username;
     });
   } else {
