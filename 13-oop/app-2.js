@@ -26,6 +26,7 @@ User.prototype.incScore = function () {
 
 class Admin extends User {
   constructor(username, email, title) {
+    // runs the contructor of the parent class
     super(username, email);
     this.title = title;
   }
