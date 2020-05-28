@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <title>Databases</title>
+</head>
+
+<body>
+  <h1>Databases (Firebase)</h1>
+
+  <div class="container my-5">
+    <h2>Recipes</h2>
+    <ul>
+    </ul>
+    <form>
+      <label for="recipe">Add a new recipe:</label>
+      <div class="input-group">
+        <input type="text" class="form-control" id="recipe" required>
+        <div class="input-group-append">
+          <input type="submit" value="add" class="btn btn-outline-secondary">
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-firestore.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use: https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyD7NE7KLZIiIpwjrAck_cIznNbktd0YWKs",
+      authDomain: "udemy-ninja-js-ecd9e.firebaseapp.com",
+      databaseURL: "https://udemy-ninja-js-ecd9e.firebaseio.com",
+      projectId: "udemy-ninja-js-ecd9e",
+      storageBucket: "udemy-ninja-js-ecd9e.appspot.com",
+      messagingSenderId: "816748387966",
+      appId: "1:816748387966:web:98c00a6582d084a8fe822f"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
+  <script src="app.js"></script>
+</body>
+
+</html>
