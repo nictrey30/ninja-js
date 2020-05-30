@@ -26,17 +26,20 @@ Chatroom.prototype.addChat = async function (message) {
 };
 
 Chatroom.prototype.getChats = function (callback) {
-  this.chats.onSnapshot((snapshot) => {
-    // snapshot.docChanges() -> gives us an array of changes
-    snapshot.docChanges().forEach((change) => {
-      if (change.type === 'added') {
-        // update the ui
-        callback(change.doc.data());
-      }
+  this.chats
+    .where('room', '==', this.room)
+    .orderBy('created_at')
+    .onSnapshot((snapshot) => {
+      // snapshot.docChanges(); //-> gives us an array of changes
+      snapshot.docChanges().forEach((change) => {
+        if (change.type === 'added') {
+          // update the ui
+          callback(change.doc.data());
+        }
+      });
     });
-  });
 };
-const chatroom = new Chatroom('gaming', 'shaun');
+const chatroom = new Chatroom('general', 'shaun');
 /*
 chatroom
   .addChat('hello everyone')
