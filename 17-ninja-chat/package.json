@@ -1,0 +1,14 @@
+{
+  "name": "17-ninja-chat",
+  "version": "1.0.0",
+  "description": "chat app using firestore",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "trey",
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^2.14.0"
+  }
+}

@@ -8,6 +8,7 @@ class Chatroom {
     this.room = room;
     this.username = username;
     this.chats = db.collection('chats');
+    this.unsub;
   }
 }
 
@@ -26,7 +27,7 @@ Chatroom.prototype.addChat = async function (message) {
 };
 
 Chatroom.prototype.getChats = function (callback) {
-  this.chats
+  this.unsub = this.chats
     .where('room', '==', this.room)
     .orderBy('created_at')
     .onSnapshot((snapshot) => {
@@ -39,7 +40,21 @@ Chatroom.prototype.getChats = function (callback) {
       });
     });
 };
-const chatroom = new Chatroom('general', 'shaun');
+
+Chatroom.prototype.updateName = function (username) {
+  this.username = username;
+};
+
+// update room
+Chatroom.prototype.updateRoom = function (room) {
+  this.room = room;
+  console.log('room updated');
+  // unsubscribe from listening to the initial room
+  if (this.unsub) {
+    this.unsub();
+  }
+};
+
 /*
 chatroom
   .addChat('hello everyone')
@@ -48,6 +63,13 @@ chatroom
   })
   .catch((err) => console.log(err));
 */
-chatroom.getChats((data) => {
-  console.log(data);
-});
+
+// emulate user changing chat room after 3s
+// setTimeout(() => {
+//   chatroom.updateRoom('gaming');
+//   chatroom.updateName('yoshi');
+//   chatroom.getChats((data) => {
+//     console.log(data);
+//   });
+//   chatroom.addChat('hello gaming');
+// }, 3000);
