@@ -27,6 +27,7 @@ Chatroom.prototype.addChat = async function (message) {
 };
 
 Chatroom.prototype.getChats = function (callback) {
+  // this.unsub = a function that when it gets invoked, it will unsubscribe from the real time listener
   this.unsub = this.chats
     .where('room', '==', this.room)
     .orderBy('created_at')
