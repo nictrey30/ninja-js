@@ -44,6 +44,7 @@ Chatroom.prototype.getChats = function (callback) {
 
 Chatroom.prototype.updateName = function (username) {
   this.username = username;
+  localStorage.setItem('username', username);
 };
 
 // update room

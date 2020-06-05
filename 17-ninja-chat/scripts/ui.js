@@ -21,3 +21,7 @@ ChatUI.prototype.render = function (data) {
   `;
   this.list.innerHTML += html;
 };
+// clear the html inside the chat list when we are changing rooms
+ChatUI.prototype.clear = function () {
+  this.list.innerHTML = '';
+};
