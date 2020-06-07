@@ -9,5 +9,14 @@ console.log(result);
 // spread syntax (arrays) - spreads the array out into its individual components
 const people = ['shaun', 'ryu', 'crystal'];
 console.log(...people);
+const members = ['mario', 'chun-li', ...people];
+console.log(members);
 
 // spread syntax (objects)
+const person = {
+  name: 'shaun',
+  age: 30,
+  job: 'ninja'
+};
+const personClone = { ...person, location: 'manchester' };
+console.log(personClone);
