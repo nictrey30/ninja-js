@@ -10,5 +10,6 @@ export const addTitle = (text) => {
   body.appendChild(title);
 };
 
-styleBody();
-addTitle('Hello World! from the dom file');
+export const contact = 'mario@thenetninja.co.uk';
+
+// export { styleBody, addTitle, contact };
