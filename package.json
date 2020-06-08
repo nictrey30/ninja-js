@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/nictrey30/ninja-js#readme",
   "dependencies": {
-    "date-fns": "^2.9.0"
+    "date-fns": "^2.14.0"
   }
 }

@@ -1,0 +1,17 @@
+{
+  "name": "19-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "babel": "node_modules/.bin/babel src/app.js -o dist/assets/bundle.js"
+  },
+  "author": "Trey",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2"
+  }
+}
