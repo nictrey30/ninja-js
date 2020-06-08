@@ -1,12 +1,4 @@
-const greet = (name) => {
-  console.log(`Hello ${name}`);
-};
+import { styleBody, addTitle } from './dom';
 
-greet('mario');
-greet('luigi');
-
-class User {
-  constructor() {
-    this.score = 0;
-  }
-}
+console.log('index file');
+addTitle('test');
