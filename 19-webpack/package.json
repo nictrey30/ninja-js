@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "babel": "node_modules/.bin/babel src/app.js -w -o dist/assets/bundle.js",
-    "webpack": "node_modules/.bin/webpack"
+    "build": "node_modules/.bin/webpack --mode production",
+    "serve": "webpack-dev-server --mode development"
   },
   "author": "Trey",
   "license": "ISC",
@@ -15,6 +16,7 @@
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
   }
 }
