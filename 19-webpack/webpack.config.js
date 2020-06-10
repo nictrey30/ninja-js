@@ -11,5 +11,20 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'dist'),
     // public path property
     publicPath: '/assets/'
+  },
+  module: {
+    rules: [
+      {
+        // regex to describe on which files we want to run the loader
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      }
+    ]
   }
 };
