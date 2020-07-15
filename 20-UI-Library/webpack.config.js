@@ -10,7 +10,8 @@ module.exports = {
     // absolute path that tells the server where the base directory is that we want to serve to the browser
     contentBase: path.resolve(__dirname, 'dist'),
     // public path property
-    publicPath: '/assets/'
+    publicPath: '/assets/',
+    port: 2000
   },
   module: {
     rules: [
@@ -29,6 +30,7 @@ module.exports = {
       {
         test: /\.css$/,
         // the order of loaders is from right to left
+        // the css loader collects the css from a css file when we import it, the style loader takes that css and it adds it to our html page
         use: ['style-loader', 'css-loader']
       }
     ]

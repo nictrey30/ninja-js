@@ -3,7 +3,7 @@ class Tooltip {
   // element - the thing that we want to use the tooltip on
   constructor(element) {
     this.element = element;
-    this.message = element.getAttribute('data-message');
+    this.message = element.dataset.message;
   }
   // function to initialize the component
   init() {
@@ -12,7 +12,6 @@ class Tooltip {
     tip.classList.add('tip');
     tip.textContent = this.message;
     this.element.appendChild(tip);
-
     this.element.addEventListener('mouseenter', () => {
       tip.classList.add('active');
     });

@@ -24,7 +24,7 @@ class Tabs {
       item.classList.remove('active');
     });
     // add new active class
-    const selector = e.target.getAttribute('data-target');
+    const selector = e.target.dataset.target;
     const content = this.container.querySelector(selector);
     content.classList.add('active');
   }
